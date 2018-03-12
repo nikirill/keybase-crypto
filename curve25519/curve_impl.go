@@ -4,6 +4,7 @@ import (
 	"crypto/elliptic"
 	"math/big"
 	"sync"
+	"fmt"
 )
 
 var cv25519 cv25519Curve
@@ -27,9 +28,17 @@ func (cv25519Curve) ScalarMult(x1, y1 *big.Int, scalar []byte) (x, y *big.Int) {
 	var x1Bytes [32]byte
 	var scalarBytes [32]byte
 
-	copy(x1Bytes[:], x1.Bytes()[:32])
+	x1B := x1.Bytes()
+	if len(x1B) < 32 {
+		zeroBytes := make([]byte, 32-len(x1B))
+		x1B = append(zeroBytes, x1B...)
+	}
+	copy(x1Bytes[:], x1B[:32])
+	if len(scalar) < 32 {
+		zeroBytes := make([]byte, 32-len(scalar))
+		scalar = append(zeroBytes, scalar...)
+	}
 	copyReverse(scalarBytes[:], scalar[:32])
-
 	scalarMult(&dst, &scalarBytes, &x1Bytes)
 
 	x = new(big.Int).SetBytes(dst[:])
