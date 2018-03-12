@@ -14,8 +14,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/keybase/go-crypto/openpgp/packet"
-	"github.com/keybase/go-crypto/rsa"
+	"github.com/nikirill/go-crypto/openpgp/packet"
+	"github.com/nikirill/go-crypto/rsa"
 )
 
 func TestSignDetached(t *testing.T) {

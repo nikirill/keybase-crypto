@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/keybase/go-crypto/openpgp/packet"
+	"github.com/nikirill/go-crypto/openpgp/packet"
 )
 
 func TestRevokedKey(t *testing.T) {

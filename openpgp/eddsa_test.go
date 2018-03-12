@@ -7,9 +7,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/keybase/go-crypto/openpgp/armor"
-	"github.com/keybase/go-crypto/openpgp/clearsign"
-	"github.com/keybase/go-crypto/openpgp/packet"
+	"github.com/nikirill/go-crypto/openpgp/armor"
+	"github.com/nikirill/go-crypto/openpgp/clearsign"
+	"github.com/nikirill/go-crypto/openpgp/packet"
 )
 
 const ed25519SecretKey = `-----BEGIN PGP PRIVATE KEY BLOCK-----

@@ -8,8 +8,8 @@ import (
 	"testing"
 	"time"
 
-	pgpErrors "github.com/keybase/go-crypto/openpgp/errors"
-	"github.com/keybase/go-crypto/openpgp/packet"
+	pgpErrors "github.com/nikirill/go-crypto/openpgp/errors"
+	"github.com/nikirill/go-crypto/openpgp/packet"
 	"golang.org/x/crypto/openpgp/armor"
 )
 

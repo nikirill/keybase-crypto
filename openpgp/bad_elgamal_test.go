@@ -5,9 +5,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/keybase/go-crypto/openpgp/clearsign"
-	"github.com/keybase/go-crypto/openpgp/errors"
-	"github.com/keybase/go-crypto/openpgp/packet"
+	"github.com/nikirill/go-crypto/openpgp/clearsign"
+	"github.com/nikirill/go-crypto/openpgp/errors"
+	"github.com/nikirill/go-crypto/openpgp/packet"
 )
 
 func TestBadElgamalSubkey(t *testing.T) {
