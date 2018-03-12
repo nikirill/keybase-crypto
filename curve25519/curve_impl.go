@@ -4,7 +4,6 @@ import (
 	"crypto/elliptic"
 	"math/big"
 	"sync"
-	"fmt"
 )
 
 var cv25519 cv25519Curve
