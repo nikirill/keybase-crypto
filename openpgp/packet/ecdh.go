@@ -4,10 +4,9 @@ import (
 	"bytes"
 	"io"
 	"math/big"
-
-	"github.com/keybase/go-crypto/openpgp/ecdh"
-	"github.com/keybase/go-crypto/openpgp/errors"
-	"github.com/keybase/go-crypto/openpgp/s2k"
+	"github.com/nikirill/go-crypto/openpgp/ecdh"
+	"github.com/nikirill/go-crypto/openpgp/errors"
+	"github.com/nikirill/go-crypto/openpgp/s2k"
 )
 
 // ECDHKdfParams generates KDF parameters sequence for given
