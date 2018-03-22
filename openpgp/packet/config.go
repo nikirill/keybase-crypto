@@ -49,6 +49,8 @@ type Config struct {
 	// ReuseSignatures tells us to reuse existing Signatures
 	// on serialized output.
 	ReuseSignaturesOnSerialize bool
+	// If Hidden is true, instead of the pubkeyId of a recipient zeros will written in the header.
+	Hidden bool
 }
 
 func (c *Config) Random() io.Reader {

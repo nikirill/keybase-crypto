@@ -157,7 +157,11 @@ func (e *EncryptedKey) Serialize(w io.Writer) error {
 func SerializeEncryptedKey(w io.Writer, pub *PublicKey, cipherFunc CipherFunction, key []byte, config *Config) error {
 	var buf [10]byte
 	buf[0] = encryptedKeyVersion
-	binary.BigEndian.PutUint64(buf[1:9], pub.KeyId)
+	if !config.Hidden {
+		binary.BigEndian.PutUint64(buf[1:9], pub.KeyId)
+	} else {
+		binary.BigEndian.PutUint64(buf[1:9], 0)
+	}
 	buf[9] = byte(pub.PubKeyAlgo)
 
 	keyBlock := make([]byte, 1 /* cipher type */ +len(key)+2 /* checksum */)
