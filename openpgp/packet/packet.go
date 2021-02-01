@@ -17,7 +17,7 @@ import (
 
 	"github.com/nikirill/go-crypto/cast5"
 	"github.com/nikirill/go-crypto/openpgp/errors"
-	"github.com/keybase/go-crypto/rsa"
+	"github.com/nikirill/go-crypto/rsa"
 )
 
 // readFull is the same as io.ReadFull except that reading zero bytes returns

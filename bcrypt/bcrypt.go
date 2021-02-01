@@ -15,7 +15,7 @@ import (
 	"io"
 	"strconv"
 
-	"github.com/keybase/go-crypto/blowfish"
+	"github.com/nikirill/go-crypto/blowfish"
 )
 
 const (

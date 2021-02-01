@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/keybase/go-crypto/openpgp/armor"
-	"github.com/keybase/go-crypto/openpgp/packet"
+	"github.com/nikirill/go-crypto/openpgp/armor"
+	"github.com/nikirill/go-crypto/openpgp/packet"
 )
 
 // Keep key in parts that we concatenate in different ways to get different

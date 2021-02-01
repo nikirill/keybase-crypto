@@ -20,9 +20,9 @@ package box
 import (
 	"io"
 
-	"github.com/keybase/go-crypto/curve25519"
-	"github.com/keybase/go-crypto/nacl/secretbox"
-	"github.com/keybase/go-crypto/salsa20/salsa"
+	"github.com/nikirill/go-crypto/curve25519"
+	"github.com/nikirill/go-crypto/nacl/secretbox"
+	"github.com/nikirill/go-crypto/salsa20/salsa"
 )
 
 // Overhead is the number of bytes of overhead when boxing a message.
