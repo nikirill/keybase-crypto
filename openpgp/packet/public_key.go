@@ -393,40 +393,41 @@ func NewECDHPublicKey(creationTime time.Time, pub *ecdh.PublicKey) *PublicKey {
 	return pk
 }
 
-func NewECDHPublicKey(creationTime time.Time, pub *ecdh.PublicKey) *PublicKey {
-	pk := &PublicKey{
-		CreationTime: creationTime,
-		PubKeyAlgo:   PubKeyAlgoECDH,
-		PublicKey:    pub,
-		ec:           new(ecdsaKey),
-		ecdh:         new(ecdhKdf),
-	}
-	switch pub.Curve {
-	case elliptic.P256():
-		pk.ec.oid = oidCurveP256
-	case elliptic.P384():
-		pk.ec.oid = oidCurveP384
-	case elliptic.P521():
-		pk.ec.oid = oidCurveP521
-	case brainpool.P256r1():
-		pk.ec.oid = oidCurveP256r1
-	case brainpool.P384r1():
-		pk.ec.oid = oidCurveP384r1
-	case brainpool.P512r1():
-		pk.ec.oid = oidCurveP512r1
-	case curve25519.Cv25519():
-		pk.ec.oid = oidCurve25519
-	}
-	pk.ec.p.bytes = elliptic.Marshal(pub.Curve, pub.X, pub.Y)
-	pk.ec.p.bitLength = uint16(8 * len(pk.ec.p.bytes))
-
-	// hardcoded kdf options
-	pk.ecdh.KdfHash = 8 // crypto.SHA256
-	pk.ecdh.KdfAlgo = 7 // packet.CipherAES128
-
-	pk.setFingerPrintAndKeyId()
-	return pk
-}
+//Old home-cooked version
+//func NewECDHPublicKey(creationTime time.Time, pub *ecdh.PublicKey) *PublicKey {
+//	pk := &PublicKey{
+//		CreationTime: creationTime,
+//		PubKeyAlgo:   PubKeyAlgoECDH,
+//		PublicKey:    pub,
+//		ec:           new(ecdsaKey),
+//		ecdh:         new(ecdhKdf),
+//	}
+//	switch pub.Curve {
+//	case elliptic.P256():
+//		pk.ec.oid = oidCurveP256
+//	case elliptic.P384():
+//		pk.ec.oid = oidCurveP384
+//	case elliptic.P521():
+//		pk.ec.oid = oidCurveP521
+//	case brainpool.P256r1():
+//		pk.ec.oid = oidCurveP256r1
+//	case brainpool.P384r1():
+//		pk.ec.oid = oidCurveP384r1
+//	case brainpool.P512r1():
+//		pk.ec.oid = oidCurveP512r1
+//	case curve25519.Cv25519():
+//		pk.ec.oid = oidCurve25519
+//	}
+//	pk.ec.p.bytes = elliptic.Marshal(pub.Curve, pub.X, pub.Y)
+//	pk.ec.p.bitLength = uint16(8 * len(pk.ec.p.bytes))
+//
+//	// hardcoded kdf options
+//	pk.ecdh.KdfHash = 8 // crypto.SHA256
+//	pk.ecdh.KdfAlgo = 7 // packet.CipherAES128
+//
+//	pk.setFingerPrintAndKeyId()
+//	return pk
+//}
 
 func (pk *PublicKey) parse(r io.Reader) (err error) {
 	// RFC 4880, section 5.5.2
