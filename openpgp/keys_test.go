@@ -12,7 +12,7 @@ import (
 	"time"
 
 	"github.com/nikirill/go-crypto/openpgp/armor"
-	pgpErrors "github.com/nikirill/go-crypto/openpgp/
+	pgpErrors "github.com/nikirill/go-crypto/openpgp/errors"
 	"github.com/nikirill/go-crypto/openpgp/packet"
 )
 
