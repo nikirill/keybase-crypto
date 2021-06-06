@@ -7,7 +7,7 @@ package packet
 import (
 	"io"
 
-	"github.com/nikirill/go-crypto/openpgp/errors"
+	"github.com/nikirill/keybase-crypto/openpgp/errors"
 )
 
 // Reader reads packets from an io.Reader and allows packets to be 'unread' so

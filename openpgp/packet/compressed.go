@@ -11,7 +11,7 @@ import (
 	"io"
 	"strconv"
 
-	"github.com/nikirill/go-crypto/openpgp/errors"
+	"github.com/nikirill/keybase-crypto/openpgp/errors"
 )
 
 // Compressed represents a compressed OpenPGP packet. The decompressed contents

@@ -10,7 +10,7 @@ import (
 	"encoding/hex"
 	"testing"
 
-	"github.com/nikirill/go-crypto/openpgp/errors"
+	"github.com/nikirill/keybase-crypto/openpgp/errors"
 )
 
 func TestSignatureRead(t *testing.T) {

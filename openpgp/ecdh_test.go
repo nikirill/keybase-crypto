@@ -12,11 +12,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/nikirill/go-crypto/brainpool"
-	"github.com/nikirill/go-crypto/curve25519"
-	"github.com/nikirill/go-crypto/openpgp/armor"
-	"github.com/nikirill/go-crypto/openpgp/ecdh"
-	"github.com/nikirill/go-crypto/openpgp/packet"
+	"github.com/nikirill/keybase-crypto/brainpool"
+	"github.com/nikirill/keybase-crypto/curve25519"
+	"github.com/nikirill/keybase-crypto/openpgp/armor"
+	"github.com/nikirill/keybase-crypto/openpgp/ecdh"
+	"github.com/nikirill/keybase-crypto/openpgp/packet"
 )
 
 const privKey = `-----BEGIN PGP PRIVATE KEY BLOCK-----

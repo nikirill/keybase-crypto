@@ -24,7 +24,7 @@ import (
 	"io"
 	"strconv"
 
-	"github.com/nikirill/go-crypto/ed25519/internal/edwards25519"
+	"github.com/nikirill/keybase-crypto/ed25519/internal/edwards25519"
 )
 
 const (

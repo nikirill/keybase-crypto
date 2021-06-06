@@ -14,7 +14,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/nikirill/go-crypto/rsa"
+	"github.com/nikirill/keybase-crypto/rsa"
 )
 
 var pubKeyTests = []struct {

@@ -15,8 +15,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/nikirill/go-crypto/openpgp/errors"
-	"github.com/nikirill/go-crypto/rsa"
+	"github.com/nikirill/keybase-crypto/openpgp/errors"
+	"github.com/nikirill/keybase-crypto/rsa"
 )
 
 // PublicKeyV3 represents older, version 3 public keys. These keys are less secure and

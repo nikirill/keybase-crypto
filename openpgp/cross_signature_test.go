@@ -10,8 +10,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/nikirill/go-crypto/openpgp/armor"
-	"github.com/nikirill/go-crypto/openpgp/packet"
+	"github.com/nikirill/keybase-crypto/openpgp/armor"
+	"github.com/nikirill/keybase-crypto/openpgp/packet"
 )
 
 func ensureCrossSignatureInBundle(bundleStr string, t *testing.T) {

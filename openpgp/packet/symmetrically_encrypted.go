@@ -12,7 +12,7 @@ import (
 	"io"
 	"strconv"
 
-	"github.com/nikirill/go-crypto/openpgp/errors"
+	"github.com/nikirill/keybase-crypto/openpgp/errors"
 )
 
 // SymmetricallyEncrypted represents a symmetrically encrypted byte string. The

@@ -17,12 +17,12 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/nikirill/go-crypto/ed25519"
-	"github.com/nikirill/go-crypto/openpgp/ecdh"
-	"github.com/nikirill/go-crypto/openpgp/elgamal"
-	"github.com/nikirill/go-crypto/openpgp/errors"
-	"github.com/nikirill/go-crypto/openpgp/s2k"
-	"github.com/nikirill/go-crypto/rsa"
+	"github.com/nikirill/keybase-crypto/ed25519"
+	"github.com/nikirill/keybase-crypto/openpgp/ecdh"
+	"github.com/nikirill/keybase-crypto/openpgp/elgamal"
+	"github.com/nikirill/keybase-crypto/openpgp/errors"
+	"github.com/nikirill/keybase-crypto/openpgp/s2k"
+	"github.com/nikirill/keybase-crypto/rsa"
 )
 
 // PrivateKey represents a possibly encrypted private key. See RFC 4880,

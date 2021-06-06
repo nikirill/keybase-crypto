@@ -11,9 +11,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/nikirill/go-crypto/openpgp/armor"
-	pgpErrors "github.com/nikirill/go-crypto/openpgp/errors"
-	"github.com/nikirill/go-crypto/openpgp/packet"
+	"github.com/nikirill/keybase-crypto/openpgp/armor"
+	pgpErrors "github.com/nikirill/keybase-crypto/openpgp/errors"
+	"github.com/nikirill/keybase-crypto/openpgp/packet"
 )
 
 func TestKeyExpiry(t *testing.T) {

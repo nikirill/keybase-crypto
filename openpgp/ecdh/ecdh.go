@@ -12,7 +12,7 @@ import (
 	"math/big"
 	"syscall"
 
-	"github.com/nikirill/go-crypto/curve25519"
+	"github.com/nikirill/keybase-crypto/curve25519"
 )
 
 type PublicKey struct {

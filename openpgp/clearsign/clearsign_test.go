@@ -8,7 +8,7 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/nikirill/go-crypto/openpgp"
+	"github.com/nikirill/keybase-crypto/openpgp"
 )
 
 func testParse(t *testing.T, input []byte, expected, expectedPlaintext string) {

@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/nikirill/go-crypto/openpgp/armor"
+	"github.com/nikirill/keybase-crypto/openpgp/armor"
 )
 
 func TestMultisig(t *testing.T) {
